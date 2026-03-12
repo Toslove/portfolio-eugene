@@ -36,4 +36,7 @@ https://github.com/Toslove/portfolio-eugene
 
 ## Lancer le projet en local
 
-Installer les dépendances :
+Cloner le projet puis installer les dépendances :
+
+```bash
+npm install
