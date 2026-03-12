@@ -19,7 +19,7 @@
           <p class="p">Partage de réflexions</p>
 
           <div style="margin-top:14px;">
-            <a href="/blog" class="btn">Consulter le blog</a>
+           <RouterLink to="/blog" class="btn">Consulter le blog</RouterLink>
           </div>
         </div>
       </div>
