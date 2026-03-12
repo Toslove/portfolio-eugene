@@ -1,42 +1,39 @@
-# portfolio-eugene
+# Portfolio – Eugène Tossa
 
-This template should help get you started developing with Vue 3 in Vite.
+Portfolio personnel développé avec **Vue.js** afin de présenter mon profil, mes compétences et mes expériences autour de la **Data Governance**, du **développement web** et de la **conception de solutions data sécurisées**.
 
-## Recommended IDE Setup
+## Aperçu du projet
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Ce portfolio contient :
 
-## Recommended Browser Setup
+- Une présentation personnelle
+- Mon parcours académique
+- Mes compétences techniques et non techniques
+- Mes expériences
+- Une section blog pour partager des réflexions de temps en temps.
+- Mes informations de contact
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
 
-## Type Support for `.vue` Imports in TS
+## Technologies utilisées
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- Vue.js
+- Vite
+- HTML
+- CSS
+- JavaScript
 
-## Customize configuration
+## Version en ligne
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+Le site est accessible ici :
 
-## Project Setup
+https://eugene-tossa-portfolio.netlify.app
 
-```sh
-npm install
-```
 
-### Compile and Hot-Reload for Development
+## Repository GitHub
 
-```sh
-npm run dev
-```
+https://github.com/Toslove/portfolio-eugene
 
-### Type-Check, Compile and Minify for Production
 
-```sh
-npm run build
-```
+## Lancer le projet en local
+
+Installer les dépendances :
