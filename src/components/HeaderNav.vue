@@ -1,7 +1,6 @@
 <template>
   <header class="header">
     <div class="container nav">
-      
 
       <!-- Desktop nav -->
       <nav class="links desktopLinks">
@@ -15,12 +14,6 @@
       </nav>
 
       <div class="rightActions">
-        <!-- Toggle thème -->
-        <button class="themeBtn" @click="toggleTheme" aria-label="Changer le thème">
-          <span v-if="theme === 'dark'">☀️</span>
-          <span v-else>🌙</span>
-        </button>
-
         <!-- Burger (mobile) -->
         <button class="burger" @click="isOpen = !isOpen" aria-label="Ouvrir le menu">
           <span class="b1"></span>
@@ -44,29 +37,13 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from "vue";
+import { ref } from "vue";
 
-const theme = ref("dark");
 const isOpen = ref(false);
 
 function close() {
   isOpen.value = false;
 }
-
-function applyTheme(nextTheme) {
-  theme.value = nextTheme;
-  document.documentElement.setAttribute("data-theme", nextTheme);
-  localStorage.setItem("theme", nextTheme);
-}
-
-function toggleTheme() {
-  applyTheme(theme.value === "dark" ? "light" : "dark");
-}
-
-onMounted(() => {
-  const saved = localStorage.getItem("theme");
-  applyTheme(saved === "light" ? "light" : "dark");
-});
 </script>
 
 <style scoped>
@@ -74,24 +51,6 @@ onMounted(() => {
   display: flex;
   gap: 10px;
   align-items: center;
-}
-
-/* thème */
-.themeBtn {
-  width: 44px;
-  height: 44px;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: transparent;
-  color: inherit;
-  cursor: pointer;
-  display: grid;
-  place-items: center;
-  transition: transform 0.18s ease, background 0.18s ease;
-}
-.themeBtn:hover {
-  transform: translateY(-1px);
-  background: rgba(255, 255, 255, 0.06);
 }
 
 /* burger */
@@ -104,7 +63,9 @@ onMounted(() => {
   background: transparent;
   cursor: pointer;
   padding: 10px;
+  color: inherit;
 }
+
 .burger span {
   display: block;
   height: 2px;
@@ -121,12 +82,14 @@ onMounted(() => {
   background: color-mix(in oklab, var(--bg) 88%, transparent);
   backdrop-filter: blur(12px);
 }
+
 .mobileMenu a {
   display: block;
   padding: 12px 10px;
   border-radius: 14px;
   color: var(--text);
 }
+
 .mobileMenu a:hover {
   background: rgba(34, 211, 238, 0.10);
   color: var(--accent);
@@ -137,9 +100,11 @@ onMounted(() => {
   .desktopLinks {
     display: none;
   }
+
   .burger {
     display: inline-block;
   }
+
   .mobileMenu {
     display: block;
   }
