@@ -3,8 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import "./assets/main.css";
 
-// Forcer définitivement le mode sombre
+// force encore le sombre une fois Vue lancé
 document.documentElement.setAttribute("data-theme", "dark");
-localStorage.removeItem("theme");
 
 createApp(App).use(router).mount("#app");
