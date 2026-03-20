@@ -26,8 +26,10 @@
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
-            <li>Vue.js</li>
+            <li>PHP</li>
             <li>React</li>
+            <li>Angular</li> 
+            <li>Vue.js</li>
             <li>Node.js</li>
           </ul>
         </div>
