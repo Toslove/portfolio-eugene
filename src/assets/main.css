@@ -55,6 +55,7 @@ img { max-width: 100%; display: block; }
   padding-right: 18px;
 }
 
+
 .section { padding: 75px 0; }
 
 .h2 {
@@ -165,12 +166,18 @@ img { max-width: 100%; display: block; }
    HEADER / NAV
 ========================= */
 .header {
-  position: sticky;
+  position: fixed !important;
   top: 0;
-  z-index: 50;
-  background: color-mix(in oklab, var(--bg) 82%, transparent);
+  left: 0;
+  right: 0;
+  width: 100%;
+
+  z-index: 99999 !important;
+
+  background: rgba(11, 15, 26, 0.92);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid color-mix(in oklab, var(--accent) 14%, transparent);
+
+  border-bottom: 1px solid rgba(34, 211, 238, 0.18);
 }
 
 .nav {
@@ -367,12 +374,11 @@ body::before {
     radial-gradient(1px 1px at 45% 15%, rgba(255,255,255,.85), transparent),
     radial-gradient(1px 1px at 75% 65%, rgba(255,255,255,.95), transparent);
 
-  background-size: 180px 180px;
+  background-size: 170px 170px;
 
   
 }
 #app,
-.header,
 .section,
 .footer {
   position: relative;
