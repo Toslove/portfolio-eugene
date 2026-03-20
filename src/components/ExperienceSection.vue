@@ -20,6 +20,21 @@
         </div>
 
         <div class="card expCard">
+          <h3 style="margin-top:0;">Audit RGPD & Sécurité des systèmes d’information</h3>
+          <p class="p"> Avignon Université (Février 2026)</p>
+          <ul class="p" style="padding-left:18px;">
+            <li>Réalisation d’un audit RGPD : cartographie des traitements, analyse des flux de données
+            personnelles et identification des risques de non-conformité</li>
+            <li>Conduite d’une analyse de sécurité SI : identification des vulnérabilités et évaluation des
+            risques.</li>
+            <li>Définition de recommandations techniques et organisationnelles (DPIA, contrôles d’accès,
+            sécurisation des flux, bonnes pratiques)</li>
+            <li>Traduction des enjeux réglementaires, techniques et métiers en actions concrètes de
+            mise en conformité et de sécurisation.</li>
+          </ul>
+        </div>
+
+        <div class="card expCard">
           <h3 style="margin-top:0;">Stage — Gouvernance des données</h3>
           <p class="p">Malte (Juin 2025 - Aout 2025)</p>
           <ul class="p" style="padding-left:18px;">

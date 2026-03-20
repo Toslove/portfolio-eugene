@@ -4,13 +4,13 @@
 
       <!-- Desktop nav -->
       <nav class="links desktopLinks">
-        <RouterLink to="/#home">Accueil</RouterLink>
-        <RouterLink to="/#about">À propos</RouterLink>
-        <RouterLink to="/#education">Parcours</RouterLink>
-        <RouterLink to="/#skills">Compétences</RouterLink>
-        <RouterLink to="/#experience">Expériences</RouterLink>
-        <RouterLink to="/blog">Blog</RouterLink>
-        <RouterLink to="/#contact">Contact</RouterLink>
+        <button class="navBtn" @click="goToSection('home')">Accueil</button>
+        <button class="navBtn" @click="goToSection('about')">À propos</button>
+        <button class="navBtn" @click="goToSection('education')">Parcours</button>
+        <button class="navBtn" @click="goToSection('skills')">Compétences</button>
+        <button class="navBtn" @click="goToSection('experience')">Expériences</button>
+        <button class="navBtn" @click="goToBlog">Blog</button>
+        <button class="navBtn" @click="goToSection('contact')">Contact</button>
       </nav>
 
       <div class="rightActions">
@@ -25,24 +25,50 @@
 
     <!-- Mobile dropdown -->
     <div v-if="isOpen" class="mobileMenu">
-      <RouterLink to="/#home" @click="close">Accueil</RouterLink>
-      <RouterLink to="/#about" @click="close">À propos</RouterLink>
-      <RouterLink to="/#education" @click="close">Parcours</RouterLink>
-      <RouterLink to="/#skills" @click="close">Compétences</RouterLink>
-      <RouterLink to="/#experience" @click="close">Expérience</RouterLink>
-      <RouterLink to="/blog" @click="close">Blog</RouterLink>
-      <RouterLink to="/#contact" @click="close">Contact</RouterLink>
+      <button class="mobileBtn" @click="goToSection('home')">Accueil</button>
+      <button class="mobileBtn" @click="goToSection('about')">À propos</button>
+      <button class="mobileBtn" @click="goToSection('education')">Parcours</button>
+      <button class="mobileBtn" @click="goToSection('skills')">Compétences</button>
+      <button class="mobileBtn" @click="goToSection('experience')">Expérience</button>
+      <button class="mobileBtn" @click="goToBlog">Blog</button>
+      <button class="mobileBtn" @click="goToSection('contact')">Contact</button>
     </div>
   </header>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, nextTick } from "vue";
+import { useRoute, useRouter } from "vue-router";
 
 const isOpen = ref(false);
+const router = useRouter();
+const route = useRoute();
 
 function close() {
   isOpen.value = false;
+}
+
+async function goToSection(sectionId) {
+  close();
+
+  // Si on n'est pas sur la home, on y va d'abord
+  if (route.path !== "/") {
+    await router.push("/");
+    await nextTick();
+  }
+
+  // petit délai pour laisser la page se rendre
+  setTimeout(() => {
+    const el = document.getElementById(sectionId);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, 120);
+}
+
+async function goToBlog() {
+  close();
+  await router.push("/blog");
 }
 </script>
 
@@ -51,6 +77,30 @@ function close() {
   display: flex;
   gap: 10px;
   align-items: center;
+}
+
+.navBtn,
+.mobileBtn {
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.navBtn {
+  padding: 8px 10px;
+  border-radius: 12px;
+}
+
+.navBtn:hover {
+  color: var(--accent);
+  background: rgba(34,211,238,0.08);
+  box-shadow:
+    0 0 10px rgba(34,211,238,0.3),
+    0 0 20px rgba(59,130,246,0.15);
+  border-radius: 10px;
 }
 
 /* burger */
@@ -83,14 +133,15 @@ function close() {
   backdrop-filter: blur(12px);
 }
 
-.mobileMenu a {
+.mobileBtn {
   display: block;
+  width: 100%;
   padding: 12px 10px;
   border-radius: 14px;
   color: var(--text);
 }
 
-.mobileMenu a:hover {
+.mobileBtn:hover {
   background: rgba(34, 211, 238, 0.10);
   color: var(--accent);
 }
