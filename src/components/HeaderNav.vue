@@ -109,19 +109,24 @@ async function goToBlog() {
   width: 44px;
   height: 44px;
   border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(11, 15, 26, 0.95);
   cursor: pointer;
   padding: 10px;
-  color: inherit;
+  color: #e5e7eb;
+  align-items: center;
+  justify-content: center;
 }
+
 
 .burger span {
   display: block;
+  width: 22px;
   height: 2px;
-  margin: 6px 0;
-  background: currentColor;
-  opacity: 0.9;
+  margin: 4px auto;
+  background: #e5e7eb;
+  opacity: 1;
+  border-radius: 999px;
 }
 
 /* mobile dropdown */
@@ -153,7 +158,7 @@ async function goToBlog() {
   }
 
   .burger {
-    display: inline-block;
+    display: flex;
   }
 
   .mobileMenu {

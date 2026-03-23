@@ -181,7 +181,11 @@ img { max-width: 100%; display: block; }
   backdrop-filter: blur(12px);
 
   border-bottom: 1px solid rgba(34, 211, 238, 0.18);
+  
+  color: #e5e7eb;
+  min-height: 72px;
 }
+
 
 .nav {
   height: 72px;
