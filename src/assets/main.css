@@ -174,13 +174,11 @@ img { max-width: 100%; display: block; }
   left: 0;
   width: 100%;
   z-index: 10000;
-
   background: #0b0f1a;
   border-bottom: 1px solid rgba(34, 211, 238, 0.2);
   color: #e5e7eb;
   min-height: 72px;
 }
-
 
 .nav {
   height: 72px;
