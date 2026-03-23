@@ -169,19 +169,14 @@ img { max-width: 100%; display: block; }
    HEADER / NAV
 ========================= */
 .header {
-  position: fixed !important;
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
   width: 100%;
+  z-index: 10000;
 
-  z-index: 99999 !important;
-
-  background: rgba(11, 15, 26, 0.92);
-  backdrop-filter: blur(12px);
-
-  border-bottom: 1px solid rgba(34, 211, 238, 0.18);
-  
+  background: #0b0f1a;
+  border-bottom: 1px solid rgba(34, 211, 238, 0.2);
   color: #e5e7eb;
   min-height: 72px;
 }

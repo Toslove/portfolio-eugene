@@ -96,10 +96,10 @@ async function goToBlog() {
 
 .navBtn:hover {
   color: var(--accent);
-  background: rgba(34,211,238,0.08);
+  background: rgba(34, 211, 238, 0.08);
   box-shadow:
-    0 0 10px rgba(34,211,238,0.3),
-    0 0 20px rgba(59,130,246,0.15);
+    0 0 10px rgba(34, 211, 238, 0.3),
+    0 0 20px rgba(59, 130, 246, 0.15);
   border-radius: 10px;
 }
 
@@ -110,14 +110,15 @@ async function goToBlog() {
   height: 44px;
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(11, 15, 26, 0.95);
+  background: #0b0f1a;
   cursor: pointer;
   padding: 10px;
   color: #e5e7eb;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 10001;
 }
-
 
 .burger span {
   display: block;
@@ -134,8 +135,10 @@ async function goToBlog() {
   display: none;
   padding: 12px 18px 18px;
   border-top: 1px solid rgba(34, 211, 238, 0.18);
-  background: color-mix(in oklab, var(--bg) 88%, transparent);
-  backdrop-filter: blur(12px);
+  background: #0b0f1a;
+  backdrop-filter: none;
+  position: relative;
+  z-index: 10000;
 }
 
 .mobileBtn {
@@ -143,7 +146,7 @@ async function goToBlog() {
   width: 100%;
   padding: 12px 10px;
   border-radius: 14px;
-  color: var(--text);
+  color: #e5e7eb;
 }
 
 .mobileBtn:hover {
@@ -158,7 +161,7 @@ async function goToBlog() {
   }
 
   .burger {
-    display: flex;
+    display: flex !important;
   }
 
   .mobileMenu {
